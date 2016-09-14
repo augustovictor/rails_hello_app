@@ -24,7 +24,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: {
           user: {
               name: "Victor Costa",
-              email: "victoraweb@gmail.com",
+              email: "victoraweb2@gmail.com",
               password: "12345mudar",
               password_confirmation: "12345mudar"
           }
@@ -33,7 +33,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 
     follow_redirect!
     assert_template 'users/show'
-    assert_not flash.nil?
+    assert is_logged_in?
   end
 
 end

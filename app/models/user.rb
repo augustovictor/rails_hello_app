@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :microposts
   before_save { email.downcase! }
   attr_accessor :remember_token
 

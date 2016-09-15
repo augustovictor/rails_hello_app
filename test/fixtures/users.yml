@@ -3,3 +3,8 @@ victor:
   name: Victor Augusto
   email: victoraweb@gmail.com
   password_digest: <%= User.digest('password') %>
+
+bruno:
+  name: Bruno Paulino
+  email: brunopmjp@gmail.com
+  password_digest: <%= User.digest('password') %>
